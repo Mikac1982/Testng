@@ -34,14 +34,17 @@ public class Task2 extends CommonMethods{
 		driver.findElement(By.xpath("//input[contains(@id,'login_button')]")).click();
 	}
 	
-	@Test(priority =3)
+	/*
+	 * weborder title is wrong
+	 */
+	@Test(priority=3)
 	public void webOrders() {
 		WebElement webOrderTitle= driver.findElement(By.xpath("//h1[text()='Web Orders']"));
 		if(webOrderTitle.isDisplayed()) {
-			System.out.println("webOrderTitle is Displayed");
+			System.out.println("webOrderTitle is displayed");
 		}
 		else {
-			System.out.println("webOrderTitle is not Displayed");
+			System.out.println("webOrderTitle is not displayed");
 		}
 	}
 	

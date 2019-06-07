@@ -3,13 +3,9 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.class02_.Task1"/>
-      <class name="com.class02_.SoftAndHardAssert"/>
+      <class name="com.class03.BasicXMLPartOne"/>
+      <class name="com.class03.BasicXMLPartTwo"/>
+      
     </classes>
   </test> 
-  
-  
-  
-  <!-- Test -->
-</suite> <!-- Suite -->
-
+</suite> 

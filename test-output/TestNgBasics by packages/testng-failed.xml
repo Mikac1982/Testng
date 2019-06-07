@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [TestNgBasics by packages]">
+  <test thread-count="5" name="com.class03(failed)">
+    <classes>
+      <class name="com.class03.Homework3">
+        <methods>
+          <include name="employeeDetails"/>
+          <include name="tearDown"/>
+          <include name="searchForEmployee"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.class03.Homework3 -->
+      <class name="com.class03.Homework2">
+        <methods>
+          <include name="setUp"/>
+          <include name="provideDetails"/>
+          <include name="tearDown"/>
+          <include name="addEmployee"/>
+          <include name="verifyEmployee"/>
+        </methods>
+      </class> <!-- com.class03.Homework2 -->
+    </classes>
+  </test> <!-- com.class03(failed) -->
+</suite> <!-- Failed suite [TestNgBasics by packages] -->

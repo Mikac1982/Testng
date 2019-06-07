@@ -3,12 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.class02_.SoftAndHardAssert">
+      <class name="com.class04.Task1">
         <methods>
-          <include name="hard"/>
-          <include name="soft"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="userTwo"/>
+          <include name="userOne"/>
         </methods>
-      </class> <!-- com.class02_.SoftAndHardAssert -->
+      </class> <!-- com.class04.Task1 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

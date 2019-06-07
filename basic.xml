@@ -1,0 +1,11 @@
+<suite name="BasicSuite">
+
+<test name="BasicTest1">
+
+<classes>
+<class name="com.class03_.BasicXMLPartOne"/>
+<class name="com.class03_.BasicXMLPartTwo"/>
+</classes>
+</test>
+</suite>
+
