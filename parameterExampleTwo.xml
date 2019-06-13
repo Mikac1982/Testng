@@ -5,7 +5,7 @@
 <parameter name="url" value="http://google.com"/>
   <test thread-count="5" name="Test">
   <classes>
-  <class name="com.class04.ParameterExampleTwo"/>
+  <class name="com.class04_.ParameterExampleTwo"/>
   </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

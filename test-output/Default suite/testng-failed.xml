@@ -3,14 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.class04.Task1">
+      <class name="com.class05_.SauceDemo">
         <methods>
-          <include name="tearDown"/>
+          <include name="testUsers" invocation-numbers="3"/>
           <include name="setUp"/>
-          <include name="userTwo"/>
-          <include name="userOne"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.class04.Task1 -->
+      </class> <!-- com.class05_.SauceDemo -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

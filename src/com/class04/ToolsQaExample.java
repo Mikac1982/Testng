@@ -16,7 +16,7 @@ public class ToolsQaExample extends CommonMethods{
 		setUpDriver("chrome","https://www.toolsqa.com/automation-practice-form/");
 	}
 	
-	
+	//here we store data
 	@DataProvider()
 	public Object[][] setUpData(){
 		Object [][] data=new Object[4][3];
@@ -40,6 +40,7 @@ public class ToolsQaExample extends CommonMethods{
 	return data;
 	}
 	
+	//here we retrieve data
 	@Test(dataProvider="setUpData")
 	public void getData(String first, String last, String date) {
 		driver.findElement(By.cssSelector("input[name='firstname']")).sendKeys(first);

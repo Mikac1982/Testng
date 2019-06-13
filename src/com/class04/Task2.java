@@ -52,7 +52,7 @@ public class Task2 extends CommonMethods{
 	       Assert.assertEquals(driver.findElement(By.xpath("//div[text()='Products']")).isDisplayed(), true);
 	}
 	
-	@AfterMethod
+	@AfterMethod(alwaysRun=true)
 	public void tearDown() {
 		driver.quit();
 	}

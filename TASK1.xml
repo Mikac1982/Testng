@@ -3,7 +3,8 @@
 <suite name="Suite">
 <groups>
 <run>
-<exclude name="Smoke"/>
+<include name="Smoke"/>
+<exclude name="Regression"/>
 </run>
 </groups>
   <test name="Test">

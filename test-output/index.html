@@ -49,17 +49,17 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Suite">
-                    <span>TASK1.xml</span>
+                    <span>DemoTest.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-Suite">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="group-Suite">
-                    <span>1 group</span>
+                    <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,7 +102,12 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.class04_.Task1" hash-for-method="userTwo">userTwo</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.class05_.DemoTest" hash-for-method="testCrossBrowser(chrome)">testCrossBrowser(chrome)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.class05_.DemoTest" hash-for-method="testCrossBrowser(firefox)">testCrossBrowser(firefox)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -120,14 +125,23 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.class04_.Task1</span>
+              <span class="class-name">com.class05_.DemoTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="userTwo">
-                  </a> <!-- userTwo -->
-                  <span class="method-name">userTwo</span>
+                  <a name="testCrossBrowser(chrome)">
+                  </a> <!-- testCrossBrowser(chrome) -->
+                  <span class="method-name">testCrossBrowser</span>
+                  <span class="parameters">(chrome)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCrossBrowser(firefox)">
+                  </a> <!-- testCrossBrowser(firefox) -->
+                  <span class="method-name">testCrossBrowser</span>
+                  <span class="parameters">(firefox)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -135,23 +149,25 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/Users/milenasibalic/eclipse-workspace/TestNgBasics/TASK1.xml</span>
+            <span class="header-content">/Users/milenasibalic/eclipse-workspace/TestNgBasics/DemoTest.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
-  &lt;groups&gt;
-    &lt;run&gt;
-      &lt;exclude name=&quot;Smoke&quot;/&gt;
-    &lt;/run&gt;
-  &lt;/groups&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
+&lt;suite thread-count=&quot;2&quot; guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot; parallel=&quot;tests&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;ChromeTest&quot; parallel=&quot;tests&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.class04_.Task1&quot;/&gt;
+      &lt;class name=&quot;com.class05_.DemoTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test --&gt;
+  &lt;/test&gt; &lt;!-- ChromeTest --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;FirefoxTest&quot; parallel=&quot;tests&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;firefox&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.class05_.DemoTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- FirefoxTest --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -163,7 +179,10 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (1 class)</span>
+                <span class="test-name">ChromeTest (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">FirefoxTest (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -173,14 +192,6 @@
             <span class="header-content">Groups for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="test-group">
-              <span class="test-group-name">Regression</span>
-              <br/>
-              <div class="method-in-group">
-                <span class="method-in-group-name">userTwo</span>
-                <br/>
-              </div> <!-- method-in-group -->
-            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-Suite" class="panel">
@@ -197,16 +208,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'userTwo')
-data.setCell(0, 2, 'com.class04_.Task1')
-data.setCell(0, 3, 629);
+data.setCell(0, 1, 'testCrossBrowser')
+data.setCell(0, 2, 'com.class05_.DemoTest')
+data.setCell(0, 3, 7889);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'testCrossBrowser')
+data.setCell(1, 2, 'com.class05_.DemoTest')
+data.setCell(1, 3, 4780);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 629 ms</span>
+              <span class="suite-total-time">Total running time: 12 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -221,16 +236,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">1 ignored method</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.class04_.Task1</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">userOne</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
@@ -239,19 +247,15 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.class04_.Task1</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-method before -->
+              <div class="chronological-class-name">com.class05_.DemoTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">userTwo</span>
-                <span class="method-start">2819 ms</span>
+                <span class="method-name">testCrossBrowser(chrome)</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">3451 ms</span>
-              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testCrossBrowser(firefox)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

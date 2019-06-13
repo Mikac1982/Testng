@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+<parameter name="URL" value="gaclickacademy.com"/>
+
+	<test name="Personal Loan">
+	<parameter name="URL" value="personalloan.com"/>
+	
+		<classes>
+			<class name="com.udemy.Day1">
+				<methods>
+					<include name="demo" />
+				</methods>
+
+			</class>
+			<class name="com.udemy.Day2" />
+			<class name="com.udemy.Day4">
+				
+			</class>
+		</classes>
+	</test>
+
+	<test name="Car Loan">
+	<parameter name="APIKey/username" value="123456"/>
+	<parameter name="URL" value="carloan.com"/>
+		<classes>
+			<class name="com.udemy.Day3">
+				<methods>
+					<exclude name="API.*" />
+
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite> 
